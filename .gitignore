@@ -1,0 +1,13 @@
+images/html.png
+images/react.png
+watabe-app/public/images/html.png
+watabe-app/public/images/react.png
+watabe-app/public/vite.svg
+watabe-app/src/assets/react.svg
+.DS_Store
+dist
+node_modules
+public/images/html.png
+public/images/react.png
+public/vite.svg
+src/assets/react.svg

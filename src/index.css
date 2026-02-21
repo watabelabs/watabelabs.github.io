@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a192f;
+  --color-navy-light: #112240;
+  --color-navy-lighter: #233554;
+  --color-orange: #F49625;
+  --color-orange-light: #F7B84B;
+  --color-accent: #32B6E4;
+  --color-white: #ffffff;
+  --color-gray: #8892b0;
+  --color-gray-light: #a8b2d1;
+  --color-gray-lighter: #ccd6f6;
+  --color-section-light: #f4f7fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: #0a192f;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Scroll animations ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero pulse glow ── */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50%       { transform: scale(1.1); opacity: 0.8; }
+}
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* ── Logo draw animations ── */
+@keyframes drawHex {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes hexFillIn {
+  to { opacity: 1; }
+}
+@keyframes logoWordmark {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to   { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+@keyframes logoSubtitle {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.logo-hex-stroke {
+  fill: none;
+  stroke: #32B6E4;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawHex 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.logo-hex-fill {
+  opacity: 0;
+  animation: hexFillIn 0.4s ease 0.7s forwards;
+}
+
+.logo-wordmark {
+  animation: logoWordmark 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.85s both;
+}
+
+.logo-subtitle {
+  animation: logoSubtitle 0.6s ease 1.4s both;
+}
+
+/* ── Skeleton shimmer ── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton-block {
+  background: linear-gradient(
+    90deg,
+    #e8edf5 25%,
+    #f0f4fb 50%,
+    #e8edf5 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 6px;
+}
+
+/* ── Service cards ── */
+.service-card-redesigned {
+  position: relative;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-card-redesigned::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #F49625, #F7B84B);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.service-card-redesigned:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 24px 60px rgba(244, 150, 37, 0.12);
+  border-color: rgba(244, 150, 37, 0.25);
+}
+
+.service-card-redesigned:hover::before {
+  transform: scaleX(1);
+}
+
+.service-number-watermark {
+  position: absolute;
+  top: -0.5rem;
+  right: 1.5rem;
+  font-size: 7rem;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(244, 150, 37, 0.12), rgba(247, 184, 75, 0.08));
+  border: 1px solid rgba(244, 150, 37, 0.2);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-redesigned:hover .service-icon-wrap {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(244, 150, 37, 0.2);
+}
+
+.service-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.service-card-tagline {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.service-items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.service-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.service-item-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #F49625;
+  flex-shrink: 0;
+  margin-top: 0.45rem;
+}
+
+/* ── Responsive utilities ── */
+@media (max-width: 768px) {
+  .nav-links-desktop { display: none !important; }
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+
+.service-item-more {
+  font-size: 0.8rem;
+  color: #F49625;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
