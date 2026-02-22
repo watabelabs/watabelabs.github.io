@@ -5,7 +5,7 @@ type NavigationPrps = {
   onOpenDialog: () => void;
 };
 
-const navItems = ["SERVICES", "ABOUT", "TEAM", "CONTACT"];
+const navItems = ["Services", "About", "Team", "Contact"];
 
 /* ─────────────────────────────────────────────
    Navigation
