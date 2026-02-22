@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://watabelabs.com/sitemap.xml
