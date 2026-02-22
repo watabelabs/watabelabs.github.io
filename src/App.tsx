@@ -567,7 +567,7 @@ function Hero() {
 
         <h1
           style={{
-            fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)",
+            fontSize: "clamp(2.8rem, 4.5vw, 4.8rem)",
             fontWeight: 800,
             lineHeight: 1.1,
             color: "#ffffff",
@@ -829,7 +829,7 @@ function Services() {
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
           gap: "1.75rem",
-          maxWidth: "1400px",
+          maxWidth: "1200px",
           margin: "0 auto",
         }}
       >
