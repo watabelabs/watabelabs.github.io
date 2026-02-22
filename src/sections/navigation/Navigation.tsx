@@ -151,7 +151,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
             background: "none",
             border: "none",
             color: "#fff",
-            fontSize: "1.5rem",
+            fontSize: "2.8rem",
             cursor: "pointer",
             padding: "0.5rem",
             width: "60px",
