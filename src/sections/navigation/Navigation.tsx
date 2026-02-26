@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import LogoSVG from "components/logo/LogoSvg";
+import ThemeToggle from "components/ThemeToggle";
 
 type NavigationPrps = {
   onOpenDialog: () => void;
@@ -62,7 +63,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
           justifyContent: "space-between",
           alignItems: "center",
           zIndex: 1000,
-          background: "rgba(10, 25, 47, 0.97)",
+          background: "var(--bg-primary)",
           backdropFilter: "blur(12px)",
           borderBottom: "1px solid rgba(244, 150, 37, 0.12)",
           boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
@@ -111,6 +112,11 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
             </li>
           ))}
         </ul>
+
+        {/* Theme Toggle */}
+        <div style={{ marginRight: "1rem" }}>
+          <ThemeToggle />
+        </div>
 
         {/* Desktop CTA Button */}
         <button
@@ -185,7 +191,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(10, 25, 47, 0.98)",
+            backgroundColor: "var(--bg-primary)",
             zIndex: 999,
             animation: menuAnimating
               ? "overlayFadeIn 0.3s ease forwards"
@@ -199,7 +205,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "#0a192f",
+              backgroundColor: "var(--bg-secondary)",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

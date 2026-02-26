@@ -23,8 +23,8 @@ const Footer = ({ footerColumns }: FooterProps) => {
   return (
     <footer
       style={{
-        background: "#0a192f",
-        borderTop: "1px solid #233554",
+        background: "var(--bg-primary)",
+        borderTop: "1px solid var(--bg-tertiary)",
         padding: "4rem 5% 2rem",
       }}
     >
@@ -51,7 +51,7 @@ const Footer = ({ footerColumns }: FooterProps) => {
             </a>
             <p
               style={{
-                color: "#8892b0",
+                color: "var(--text-secondary)",
                 lineHeight: 1.7,
                 fontSize: "0.9rem",
                 marginBottom: "1.25rem",
@@ -60,7 +60,7 @@ const Footer = ({ footerColumns }: FooterProps) => {
               Strategy, Design & Development. We stand at the intersection of
               strategy, design, and technology.
             </p>
-            <div style={{ color: "#8892b0", fontSize: "0.875rem" }}>
+            <div style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>
               <p style={{ marginBottom: "0.5rem" }}>
                 📍 Shop #17, PPF Complex, Oloirien, Arusha, Tanzania
               </p>
@@ -71,7 +71,7 @@ const Footer = ({ footerColumns }: FooterProps) => {
                 ✉️{" "}
                 <a
                   href="mailto:hello@watabelabs.com"
-                  style={{ color: "#F49625", textDecoration: "none" }}
+                  style={{ color: "var(--accent-primary)", textDecoration: "none" }}
                 >
                   hello@watabelabs.com
                 </a>
@@ -80,7 +80,7 @@ const Footer = ({ footerColumns }: FooterProps) => {
                 🌐{" "}
                 <a
                   href="https://www.watabelabs.com"
-                  style={{ color: "#F49625", textDecoration: "none" }}
+                  style={{ color: "var(--accent-primary)", textDecoration: "none" }}
                 >
                   www.watabelabs.com
                 </a>
@@ -92,7 +92,7 @@ const Footer = ({ footerColumns }: FooterProps) => {
             <div key={i}>
               <h4
                 style={{
-                  color: "#ffffff",
+                  color: "var(--text-primary)",
                   fontSize: "0.85rem",
                   fontWeight: 600,
                   textTransform: "uppercase",
@@ -108,16 +108,16 @@ const Footer = ({ footerColumns }: FooterProps) => {
                     <a
                       href={link.href}
                       style={{
-                        color: "#8892b0",
+                        color: "var(--text-secondary)",
                         textDecoration: "none",
                         fontSize: "0.9rem",
                         transition: "color 0.3s ease",
                       }}
                       onMouseEnter={(e) =>
-                        (e.currentTarget.style.color = "#F49625")
+                        (e.currentTarget.style.color = "var(--accent-primary)")
                       }
                       onMouseLeave={(e) =>
-                        (e.currentTarget.style.color = "#8892b0")
+                        (e.currentTarget.style.color = "var(--text-secondary)")
                       }
                     >
                       {link.label}
@@ -131,10 +131,10 @@ const Footer = ({ footerColumns }: FooterProps) => {
 
         <div
           style={{
-            borderTop: "1px solid #233554",
+            borderTop: "1px solid var(--bg-tertiary)",
             paddingTop: "2rem",
             textAlign: "center",
-            color: "#8892b0",
+            color: "var(--text-secondary)",
             fontSize: "0.875rem",
           }}
         >

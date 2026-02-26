@@ -15,11 +15,11 @@ const Field = ({
     <div style={{ display: "flex", flexDirection: "column", gap: "0.375rem" }}>
       <label
         htmlFor={id}
-        style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#374151" }}
+        style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--text-secondary)" }}
       >
         {label}
         {required && (
-          <span style={{ color: "#F49625", marginLeft: "2px" }}>*</span>
+          <span style={{ color: "var(--accent-primary)", marginLeft: "2px" }}>*</span>
         )}
       </label>
       {children}

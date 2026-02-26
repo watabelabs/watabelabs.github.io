@@ -15,7 +15,7 @@ type TeamProps = {
 ───────────────────────────────────────────── */
 const Team: React.FC<TeamProps> = ({ teamMembers }) => {
   return (
-    <section id="team" style={{ padding: "6rem 5%", background: "#f4f7fb" }}>
+    <section id="team" style={{ padding: "6rem 5%", background: "#ffffff" }}>
       <FadeIn>
         <div
           style={{
@@ -48,6 +48,7 @@ const Team: React.FC<TeamProps> = ({ teamMembers }) => {
           gap: "1.5rem",
           maxWidth: "1200px",
           margin: "0 auto",
+          alignItems: "stretch",
         }}
       >
         {teamMembers.map((member, i) => (
@@ -61,6 +62,9 @@ const Team: React.FC<TeamProps> = ({ teamMembers }) => {
                 border: "1px solid rgba(0,0,0,0.06)",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
                 transition: "all 0.3s ease",
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-4px)";
@@ -87,6 +91,7 @@ const Team: React.FC<TeamProps> = ({ teamMembers }) => {
                   margin: "0 auto 1.25rem",
                   fontSize: "2rem",
                   border: "2px solid rgba(244,150,37,0.15)",
+                  flexShrink: 0,
                 }}
               >
                 {member.icon}
@@ -106,6 +111,7 @@ const Team: React.FC<TeamProps> = ({ teamMembers }) => {
                   color: "#64748b",
                   fontSize: "0.875rem",
                   lineHeight: 1.5,
+                  marginTop: "auto",
                 }}
               >
                 {member.description}

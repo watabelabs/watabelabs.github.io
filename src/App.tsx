@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ThemeProvider } from "context/ThemeContext";
 import Hero from "sections/hero/Hero";
 import Stats, { Stat } from "sections/stats/Stats";
 import Services from "sections/services/Service";
@@ -278,7 +279,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navigation onOpenDialog={openDialog} />
       <Hero />
       <Stats stats={stats} />
@@ -292,6 +293,6 @@ export default function App() {
         onClose={closeDialog}
         services={services}
       />
-    </>
+    </ThemeProvider>
   );
 }

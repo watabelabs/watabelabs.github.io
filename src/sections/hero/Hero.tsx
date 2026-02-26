@@ -13,9 +13,9 @@ const Hero: React.FC = () => {
   return (
     <section className="hero">
       <div className="hero__content">
-        <span
+          <span
           style={{
-            color: "#F49625",
+            color: "var(--accent-primary)",
             fontWeight: 600,
             fontSize: "0.85rem",
             textTransform: "uppercase",
@@ -32,19 +32,19 @@ const Hero: React.FC = () => {
             fontSize: "clamp(2.8rem, 4.5vw, 4.8rem)",
             fontWeight: 800,
             lineHeight: 1.1,
-            color: "#ffffff",
+            color: "var(--text-primary)",
             marginBottom: "1.5rem",
           }}
         >
           We engineer systems that{" "}
-          <span style={{ color: "#F49625" }}>enable organizations</span> to
+          <span style={{ color: "var(--accent-primary)" }}>enable organizations</span> to
           operate efficiently, transparently, and securely.
         </h1>
 
         <p
           style={{
             fontSize: "1.2rem",
-            color: "#8892b0",
+            color: "var(--text-secondary)",
             maxWidth: "600px",
             marginBottom: "2.5rem",
             lineHeight: 1.75,
@@ -61,14 +61,14 @@ const Hero: React.FC = () => {
             href="#services"
             onClick={(e) => scrollTo(e, "#services")}
             style={{
-              background: "#F49625",
-              color: "#0a192f",
+              background: "var(--accent-primary)",
+              color: "var(--text-dark)",
               padding: "1rem 2rem",
               borderRadius: "4px",
               textDecoration: "none",
               fontWeight: 700,
               fontSize: "1rem",
-              border: "2px solid #F49625",
+              border: "2px solid var(--accent-primary)",
               transition: "all 0.3s ease",
               display: "inline-block",
             }}
@@ -76,12 +76,12 @@ const Hero: React.FC = () => {
               e.currentTarget.style.transform = "translateY(-3px)";
               e.currentTarget.style.boxShadow =
                 "0 16px 40px rgba(244,150,37,0.4)";
-              e.currentTarget.style.background = "#F7B84B";
+              e.currentTarget.style.background = "var(--accent-secondary)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
               e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.style.background = "#F49625";
+              e.currentTarget.style.background = "var(--accent-primary)";
             }}
           >
             Explore Our Work
@@ -91,24 +91,24 @@ const Hero: React.FC = () => {
             onClick={(e) => scrollTo(e, "#contact")}
             style={{
               background: "transparent",
-              color: "#ccd6f6",
+              color: "var(--text-primary)",
               padding: "1rem 2rem",
               borderRadius: "4px",
               textDecoration: "none",
               fontWeight: 600,
               fontSize: "1rem",
-              border: "2px solid #233554",
+              border: "2px solid var(--bg-tertiary)",
               transition: "all 0.3s ease",
               display: "inline-block",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#F49625";
-              e.currentTarget.style.color = "#F49625";
+              e.currentTarget.style.borderColor = "var(--accent-primary)";
+              e.currentTarget.style.color = "var(--accent-primary)";
               e.currentTarget.style.transform = "translateY(-3px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#233554";
-              e.currentTarget.style.color = "#ccd6f6";
+              e.currentTarget.style.borderColor = "var(--bg-tertiary)";
+              e.currentTarget.style.color = "var(--text-primary)";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >

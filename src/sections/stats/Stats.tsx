@@ -15,9 +15,9 @@ const Stats: React.FC<StatsProps> = ({ stats }) => {
     <section
       style={{
         padding: "4.5rem 5%",
-        background: "#0a192f",
-        borderTop: "1px solid #233554",
-        borderBottom: "1px solid #233554",
+        background: "var(--bg-primary)",
+        borderTop: "1px solid var(--bg-tertiary)",
+        borderBottom: "1px solid var(--bg-tertiary)",
       }}
     >
       <div
@@ -36,7 +36,7 @@ const Stats: React.FC<StatsProps> = ({ stats }) => {
               style={{
                 fontSize: "3rem",
                 fontWeight: 800,
-                color: "#F49625",
+                color: "var(--accent-primary)",
                 marginBottom: "0.5rem",
                 lineHeight: 1,
               }}
@@ -45,7 +45,7 @@ const Stats: React.FC<StatsProps> = ({ stats }) => {
             </div>
             <div
               style={{
-                color: "#8892b0",
+                color: "var(--text-secondary)",
                 fontWeight: 500,
                 textTransform: "uppercase",
                 letterSpacing: "1px",
