@@ -63,11 +63,11 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
           justifyContent: "space-between",
           alignItems: "center",
           zIndex: 1000,
-          background: "#0a192f",
+          background: "var(--bg-primary)",
           backdropFilter: "blur(12px)",
           borderBottom: "1px solid rgba(244, 150, 37, 0.12)",
           boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
-          transition: "box-shadow 0.3s ease",
+          transition: "box-shadow 0.3s ease, background 0.3s ease",
         }}
       >
         <a
@@ -164,6 +164,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
             height: "60px",
             alignItems: "center",
             justifyContent: "center",
+            transition: "color 0.3s ease",
           }}
         >
           <span
