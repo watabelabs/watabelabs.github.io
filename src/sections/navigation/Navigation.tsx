@@ -191,7 +191,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "var(--bg-primary)",
+            backgroundColor: "#0a192f",
             zIndex: 999,
             animation: menuAnimating
               ? "overlayFadeIn 0.3s ease forwards"
@@ -205,7 +205,7 @@ const Navigation = ({ onOpenDialog }: NavigationPrps) => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "var(--bg-secondary)",
+              backgroundColor: "#0a192f",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
