@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useTheme, useThemeDispatch } from "../context/ThemeContext";
 
 const ThemeToggle = () => {
   const { theme } = useTheme();
   const dispatch = useThemeDispatch();
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const toggleTheme = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
     dispatch({ type: "TOGGLE_THEME" });
+    setTimeout(() => setIsAnimating(false), 300);
   };
 
   return (
@@ -23,6 +28,7 @@ const ThemeToggle = () => {
         background: "var(--bg-secondary)",
         cursor: "pointer",
         transition: "all 0.2s ease",
+        transform: isAnimating ? "rotate(180deg)" : "rotate(0deg)",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.background = "var(--bg-tertiary)";
@@ -41,6 +47,7 @@ const ThemeToggle = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          style={{ transition: "transform 0.3s ease" }}
         >
           <circle cx="12" cy="12" r="5" />
           <line x1="12" y1="1" x2="12" y2="3" />
@@ -62,6 +69,7 @@ const ThemeToggle = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          style={{ transition: "transform 0.3s ease" }}
         >
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
