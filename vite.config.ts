@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       components: path.resolve(__dirname, "src/components"),
       sections: path.resolve(__dirname, "src/sections"),
+      context: path.resolve(__dirname, "src/context"),
     },
   },
 });

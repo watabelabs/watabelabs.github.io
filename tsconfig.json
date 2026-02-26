@@ -23,7 +23,8 @@
     "baseUrl": "src",
     "paths": {
       "components/*": ["components/*"],
-      "sections/*": ["sections/*"]
+      "sections/*": ["sections/*"],
+      "context/*": ["context/*"]
     }
   },
   "include": ["src"],
